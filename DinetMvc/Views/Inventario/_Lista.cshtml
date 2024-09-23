@@ -1,0 +1,23 @@
+﻿@model List<DinetMvc.Models.Inventario>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col">Mov</th>
+            <th class="col">Tip.Doc</th>
+            <th class="col">Doc</th>
+            <th class="col">Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var inventario in Model)
+            {
+                <tr>
+                    <td>@inventario.TIPO_MOVIMIENTO</td>
+                    <td>@inventario.TIPO_DOCUMENTO</td>
+                    <td>@inventario.NRO_DOCUMENTO</td>
+                    <td>@inventario.FECHA_TRANSACCION</td>
+                </tr>
+            }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿<div class="d-flex justify-content-between">
+    <h4>Inventario</h4>
+    <button type="button" class="btn btn-primary" onclick="inventarioController.onBtnNuevoClick()">Nuevo</button>
+</div>
+
+<div class="row mt-3">
+    <label class="form-label col">Inicio</label>
+    <input id="txtFechaInicio" type="date" class="form-control col" />
+    <label class="form-label col">Fin</label>
+    <input id="txtFechaFin" type="date" class="form-control col" />
+    <label class="form-label col">Doc</label>
+    <input id="txtDocumento" type="text" class="form-control col" />
+    <label class="form-label col">Tip</label>
+    <input id="txtTipoDoc" type="text" class="form-control col" />
+    <button type="button" class="btn btn-outline-primary col ms-2" onclick="inventarioController.onBtnBuscar()">Buscar</button>
+</div>
+
+<div id="listaInventario">
+
+</div>
+
+@Html.Partial("_Modal")
+
+@section scripts {
+    @Scripts.Render("~/bundles/inventario")
+}
